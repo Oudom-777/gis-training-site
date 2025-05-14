@@ -47,8 +47,8 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-body {
+body 
+{
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -116,26 +116,3 @@ footer {
   color: white;
   margin-top: 20px;
 }
-const schedule = [
-  { day: 'Day 1', topic: 'Introduction to GIS & Spatial Data' },
-  { day: 'Day 2', topic: 'GIS Software & Tools Overview' },
-  { day: 'Day 3', topic: 'Coordinate Systems & Mapping' },
-  { day: 'Day 4', topic: 'Data Collection and GPS Integration' },
-  { day: 'Day 5', topic: 'Spatial Analysis Techniques' },
-  { day: 'Day 6', topic: 'Web Mapping with JavaScript' },
-  { day: 'Day 7', topic: 'Final Project & Presentation' }
-];
-
-const scheduleList = document.getElementById("schedule-list");
-
-schedule.forEach(item => {
-  const li = document.createElement("li");
-  li.textContent = `${item.day}: ${item.topic}`;
-  scheduleList.appendChild(li);
-});
-
-document.getElementById("registration-form").addEventListener("submit", function(e) {
-  e.preventDefault();
-  document.getElementById("confirmation-message").textContent = "Thank you for registering!";
-  this.reset();
-});
